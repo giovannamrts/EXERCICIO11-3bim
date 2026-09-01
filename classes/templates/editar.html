@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Aluno</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body class="bg-light">
+
+
+    <div class="container mt-5">
+
+        <h2 class="mb-4">Editar Aluno</h2>
+
+        <div class="card mb-4">
+            <div class="card-body">
+
+                <form th:action="@{/editar}" method="post" class="row g-3">
+
+                    <input type="hidden" name="id" th:value="${aluno.id}" >
+
+                    <div class="col-md-5">
+                        <label class="form-label">Nome:</label>
+                        <input type="text" name="nome" th:value="${aluno.nome}"  class="form-control">
+                    </div>
+
+                    <div class="col-md-5">
+                        <label class="form-label">Prontuário:</label>
+                        <input type="text" name="prontuario" th:value="${aluno.prontuario}"  class="form-control">
+                    </div>
+
+                    <div class="col-md-5">
+                        <label class="form-label">Curso:</label>
+                        <input type="text" name="curso" th:value="${aluno.curso}"  class="form-control">
+                    </div>
+
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button type="submit" class="btn btn-primary">Salvar alterações</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+</body>
+
+</html>
